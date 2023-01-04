@@ -6,8 +6,6 @@ require (
 	github.com/BurntSushi/toml v1.2.1
 	github.com/attic-labs/graphql v0.0.0-20190507195614-b6552d20145f
 	github.com/attic-labs/kingpin v2.2.7-0.20180312050558-442efcfac769+incompatible
-//	github.com/ndau/noms v0.0.0-20210827224422-e5fa29d95e8b
-	github.com/ndau/noms v8.0.0
 	github.com/aws/aws-sdk-go v1.44.172
 	github.com/dustin/go-humanize v1.0.0
 	github.com/golang/snappy v0.0.4
@@ -24,16 +22,12 @@ require (
 )
 
 require (
-	github.com/StackExchange/wmi v1.2.1 // indirect
 	github.com/alecthomas/template v0.0.0-20190718012654-fb15b899a751 // indirect
 	github.com/alecthomas/units v0.0.0-20211218093645-b94a6e3cc137 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/go-ole/go-ole v1.2.5 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/mattn/go-colorable v0.1.13 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
-	github.com/shirou/gopsutil v2.18.12+incompatible // indirect
-	github.com/shirou/w32 v0.0.0-20160930032740-bb4de0191aa4 // indirect
 	golang.org/x/net v0.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
