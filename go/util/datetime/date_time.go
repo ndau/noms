@@ -10,8 +10,8 @@ import (
 	"math"
 	"time"
 
-	"github.com/attic-labs/noms/go/marshal"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/marshal"
+	"github.com/ndau/noms/go/types"
 )
 
 const (

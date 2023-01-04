@@ -5,7 +5,7 @@
 package types
 
 import (
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/go/d"
 )
 
 // ListIterator can be used to efficiently iterate through a Noms List.

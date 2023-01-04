@@ -13,7 +13,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/types"
 	"github.com/stretchr/testify/assert"
 )
 

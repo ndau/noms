@@ -9,10 +9,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/attic-labs/noms/go/chunks"
-	"github.com/attic-labs/noms/go/datas"
-	"github.com/attic-labs/noms/go/hash"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/chunks"
+	"github.com/ndau/noms/go/datas"
+	"github.com/ndau/noms/go/hash"
+	"github.com/ndau/noms/go/types"
 	"github.com/stretchr/testify/assert"
 )
 

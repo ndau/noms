@@ -5,7 +5,7 @@
 package types
 
 import (
-	"github.com/attic-labs/noms/go/hash"
+	"github.com/ndau/noms/go/hash"
 )
 
 // Bool is a Noms Value wrapper around the primitive bool type.

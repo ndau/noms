@@ -1,6 +1,6 @@
 package types
 
-import "github.com/attic-labs/noms/go/d"
+import "github.com/ndau/noms/go/d"
 
 // ContainCommonSupertype returns true if it's possible to synthesize
 // a non-trivial (i.e. not empty) supertype from types |a| and |b|.

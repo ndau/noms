@@ -4,7 +4,7 @@
 
 package types
 
-import "github.com/attic-labs/noms/go/d"
+import "github.com/ndau/noms/go/d"
 
 type valueDecoder struct {
 	typedBinaryNomsReader
@@ -301,7 +301,7 @@ func (r *valueDecoder) isValueSameTypeForSure(t *Type) bool {
 	case ListKind, MapKind, RefKind, SetKind:
 		// TODO: Maybe do some simple cases here too. Performance metrics should determine
 		// what is going to be worth doing.
-		// https://github.com/attic-labs/noms/issues/3776
+		// https://github.com/ndau/noms/issues/3776
 		return false
 	case StructKind:
 		return isStructSameTypeForSure(r, t)

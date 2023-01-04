@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/types"
 )
 
 // Apply applies a Patch (list of diffs) to a graph. It fulfills the

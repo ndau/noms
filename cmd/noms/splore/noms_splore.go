@@ -12,12 +12,12 @@ import (
 	"reflect"
 
 	"github.com/attic-labs/kingpin"
-	"github.com/attic-labs/noms/cmd/util"
-	"github.com/attic-labs/noms/go/config"
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/spec"
-	"github.com/attic-labs/noms/go/types"
-	"github.com/attic-labs/noms/go/util/verbose"
+	"github.com/ndau/noms/cmd/util"
+	"github.com/ndau/noms/go/config"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/spec"
+	"github.com/ndau/noms/go/types"
+	"github.com/ndau/noms/go/util/verbose"
 	humanize "github.com/dustin/go-humanize"
 	"github.com/skratchdot/open-golang/open"
 )
@@ -57,7 +57,7 @@ type nodeChild struct {
 
 func Cmd(noms *kingpin.Application) (*kingpin.CmdClause, util.KingpinHandler) {
 	splore := noms.Command("splore", `Interactively explore a Noms database using a web browser.
-See Spelling Objects at https://github.com/attic-labs/noms/blob/master/doc/spelling.md for details on the path argument.
+See Spelling Objects at https://github.com/ndau/noms/blob/master/doc/spelling.md for details on the path argument.
 `)
 	port := splore.Flag("port", "Server port. Defaults to a random port.").Short('p').Int()
 	browser := splore.Flag("browser", "Immediately open a web browser.").Short('b').Bool()

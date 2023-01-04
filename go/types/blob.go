@@ -11,7 +11,7 @@ import (
 
 	"runtime"
 
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/go/d"
 )
 
 // Blob represents a list of Blobs.

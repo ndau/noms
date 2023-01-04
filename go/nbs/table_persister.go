@@ -11,8 +11,8 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/util/sizecache"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/util/sizecache"
 )
 
 // tablePersister allows interaction with persistent storage. It provides

@@ -8,18 +8,18 @@ import (
 	"fmt"
 
 	"github.com/attic-labs/kingpin"
-	"github.com/attic-labs/noms/cmd/util"
-	"github.com/attic-labs/noms/go/config"
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/diff"
-	"github.com/attic-labs/noms/go/util/outputpager"
+	"github.com/ndau/noms/cmd/util"
+	"github.com/ndau/noms/go/config"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/diff"
+	"github.com/ndau/noms/go/util/outputpager"
 )
 
 func nomsDiff(noms *kingpin.Application) (*kingpin.CmdClause, util.KingpinHandler) {
 	cmd := noms.Command("diff", "Shows the difference between two values.")
 	stat := cmd.Flag("stat", "writes a summary of the changes instead").Bool()
-	o1 := cmd.Arg("val1", "first value - see Spelling Values at https://github.com/attic-labs/noms/blob/master/doc/spelling.md").Required().String()
-	o2 := cmd.Arg("val2", "second value - see Spelling Values at https://github.com/attic-labs/noms/blob/master/doc/spelling.md").Required().String()
+	o1 := cmd.Arg("val1", "first value - see Spelling Values at https://github.com/ndau/noms/blob/master/doc/spelling.md").Required().String()
+	o2 := cmd.Arg("val2", "second value - see Spelling Values at https://github.com/ndau/noms/blob/master/doc/spelling.md").Required().String()
 	outputpager.RegisterOutputpagerFlags(cmd)
 
 	return cmd, func(input string) int {

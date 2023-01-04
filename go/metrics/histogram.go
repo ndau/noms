@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/go/d"
 	humanize "github.com/dustin/go-humanize"
 )
 

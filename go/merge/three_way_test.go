@@ -7,8 +7,8 @@ package merge
 import (
 	"testing"
 
-	"github.com/attic-labs/noms/go/chunks"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/chunks"
+	"github.com/ndau/noms/go/types"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
 )

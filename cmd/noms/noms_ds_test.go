@@ -7,11 +7,11 @@ package main
 import (
 	"testing"
 
-	"github.com/attic-labs/noms/go/datas"
-	"github.com/attic-labs/noms/go/nbs"
-	"github.com/attic-labs/noms/go/spec"
-	"github.com/attic-labs/noms/go/types"
-	"github.com/attic-labs/noms/go/util/clienttest"
+	"github.com/ndau/noms/go/datas"
+	"github.com/ndau/noms/go/nbs"
+	"github.com/ndau/noms/go/spec"
+	"github.com/ndau/noms/go/types"
+	"github.com/ndau/noms/go/util/clienttest"
 	"github.com/stretchr/testify/suite"
 )
 

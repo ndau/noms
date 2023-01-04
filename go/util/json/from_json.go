@@ -9,8 +9,8 @@ import (
 	"io"
 	"reflect"
 
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/types"
 )
 
 func nomsValueFromDecodedJSONBase(vrw types.ValueReadWriter, o interface{}, useStruct bool) types.Value {

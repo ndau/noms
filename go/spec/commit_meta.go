@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/attic-labs/noms/go/datas"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/datas"
+	"github.com/ndau/noms/go/types"
 )
 
 const CommitMetaDateFormat = time.RFC3339

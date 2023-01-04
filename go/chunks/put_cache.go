@@ -7,7 +7,7 @@ package chunks
 import (
 	"sync"
 
-	"github.com/attic-labs/noms/go/hash"
+	"github.com/ndau/noms/go/hash"
 )
 
 func newUnwrittenPutCache() *unwrittenPutCache {

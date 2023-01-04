@@ -9,9 +9,9 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/attic-labs/noms/go/chunks"
-	"github.com/attic-labs/noms/go/constants"
-	"github.com/attic-labs/noms/go/hash"
+	"github.com/ndau/noms/go/chunks"
+	"github.com/ndau/noms/go/constants"
+	"github.com/ndau/noms/go/hash"
 	"github.com/stretchr/testify/assert"
 )
 

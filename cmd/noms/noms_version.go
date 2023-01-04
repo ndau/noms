@@ -9,8 +9,8 @@ import (
 	"os"
 
 	"github.com/attic-labs/kingpin"
-	"github.com/attic-labs/noms/cmd/util"
-	"github.com/attic-labs/noms/go/constants"
+	"github.com/ndau/noms/cmd/util"
+	"github.com/ndau/noms/go/constants"
 )
 
 func nomsVersion(noms *kingpin.Application) (*kingpin.CmdClause, util.KingpinHandler) {

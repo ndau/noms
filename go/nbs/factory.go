@@ -9,9 +9,9 @@ import (
 	"os"
 	"path"
 
-	"github.com/attic-labs/noms/go/chunks"
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/util/sizecache"
+	"github.com/ndau/noms/go/chunks"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/util/sizecache"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/aws/aws-sdk-go/service/s3"

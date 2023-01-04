@@ -11,12 +11,12 @@ import (
 
 	"github.com/attic-labs/kingpin"
 
-	"github.com/attic-labs/noms/cmd/util"
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/datas"
-	"github.com/attic-labs/noms/go/diff"
-	"github.com/attic-labs/noms/go/spec"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/cmd/util"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/datas"
+	"github.com/ndau/noms/go/diff"
+	"github.com/ndau/noms/go/spec"
+	"github.com/ndau/noms/go/types"
 )
 
 func nomsSet(noms *kingpin.Application) (*kingpin.CmdClause, util.KingpinHandler) {

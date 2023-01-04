@@ -11,8 +11,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/attic-labs/noms/go/perf/suite"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/perf/suite"
+	"github.com/ndau/noms/go/types"
 	"github.com/stretchr/testify/assert"
 )
 

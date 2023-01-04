@@ -9,9 +9,9 @@ import (
 	"fmt"
 	"regexp"
 
-	"github.com/attic-labs/noms/go/datas"
-	"github.com/attic-labs/noms/go/hash"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/datas"
+	"github.com/ndau/noms/go/hash"
+	"github.com/ndau/noms/go/types"
 )
 
 var datasetCapturePrefixRe = regexp.MustCompile("^(" + datas.DatasetRe.String() + ")")
@@ -22,7 +22,7 @@ var datasetCapturePrefixRe = regexp.MustCompile("^(" + datas.DatasetRe.String() 
 // globally, see Spec.
 //
 // For more on paths, absolute paths, and specs, see:
-// https://github.com/attic-labs/noms/blob/master/doc/spelling.md.
+// https://github.com/ndau/noms/blob/master/doc/spelling.md.
 type AbsolutePath struct {
 	// Dataset is the dataset this AbsolutePath is rooted at. Only one of
 	// Dataset and Hash should be set.

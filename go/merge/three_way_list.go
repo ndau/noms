@@ -7,8 +7,8 @@ package merge
 import (
 	"fmt"
 
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/types"
 )
 
 func threeWayListMerge(a, b, parent types.List) (merged types.List, err error) {

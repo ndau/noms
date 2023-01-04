@@ -11,8 +11,8 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/util/writers"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/util/writers"
 	humanize "github.com/dustin/go-humanize"
 )
 
