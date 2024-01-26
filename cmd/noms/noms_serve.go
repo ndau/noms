@@ -9,7 +9,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/ndau/kingpin"
+	"github.com/attic-labs/kingpin"
 	"github.com/ndau/noms/cmd/util"
 	"github.com/ndau/noms/go/config"
 	"github.com/ndau/noms/go/d"

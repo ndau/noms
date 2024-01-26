@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ndau/kingpin"
+	"github.com/attic-labs/kingpin"
 	"github.com/ndau/noms/go/util/exit"
 )
 

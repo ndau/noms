@@ -11,7 +11,7 @@ import (
 
 	"strings"
 
-	"github.com/ndau/graphql"
+	"github.com/attic-labs/graphql"
 	"github.com/ndau/noms/go/d"
 	"github.com/ndau/noms/go/types"
 )

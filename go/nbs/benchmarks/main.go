@@ -13,7 +13,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/ndau/kingpin"
+	"github.com/attic-labs/kingpin"
 	"github.com/ndau/noms/go/chunks"
 	"github.com/ndau/noms/go/d"
 	"github.com/ndau/noms/go/nbs"

@@ -10,7 +10,7 @@ import (
 	"runtime"
 	"runtime/pprof"
 
-	"github.com/ndau/kingpin"
+	"github.com/attic-labs/kingpin"
 
 	"github.com/ndau/noms/go/d"
 )

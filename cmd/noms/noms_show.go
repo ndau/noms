@@ -10,7 +10,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/ndau/kingpin"
+	"github.com/attic-labs/kingpin"
 	"github.com/ndau/noms/cmd/util"
 	"github.com/ndau/noms/go/config"
 	"github.com/ndau/noms/go/d"

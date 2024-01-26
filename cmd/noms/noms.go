@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ndau/kingpin"
+	"github.com/attic-labs/kingpin"
 
 	"github.com/ndau/noms/cmd/noms/splore"
 	"github.com/ndau/noms/cmd/util"

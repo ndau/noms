@@ -7,7 +7,7 @@ package main
 import (
 	"os"
 
-	"github.com/ndau/kingpin"
+	"github.com/attic-labs/kingpin"
 	"github.com/dustin/go-humanize"
 
 	"github.com/ndau/noms/go/d"

@@ -4,7 +4,7 @@
 
 package util
 
-import "github.com/ndau/kingpin"
+import "github.com/attic-labs/kingpin"
 
 type KingpinHandler func(input string) (exitCode int)
 type KingpinCommand func(*kingpin.Application) (*kingpin.CmdClause, KingpinHandler)

@@ -10,7 +10,7 @@ import (
 	"os/exec"
 	"sync"
 
-	"github.com/ndau/kingpin"
+	"github.com/attic-labs/kingpin"
 	goisatty "github.com/mattn/go-isatty"
 
 	"github.com/ndau/noms/go/d"

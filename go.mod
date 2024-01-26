@@ -4,8 +4,8 @@ go 1.19
 
 require (
 	github.com/BurntSushi/toml v1.2.1
-	github.com/ndau/graphql v0.0.0-20190507195614-b6552d20145f
-	github.com/ndau/kingpin v2.2.7-0.20180312050558-442efcfac769+incompatible
+	github.com/attic-labs/graphql v0.0.0-20190507195614-b6552d20145f
+	github.com/attic-labs/kingpin v2.2.7-0.20180312050558-442efcfac769+incompatible
 //	github.com/ndau/noms v0.0.0-20210827224422-e5fa29d95e8b
 	github.com/aws/aws-sdk-go v1.44.172
 	github.com/dustin/go-humanize v1.0.0

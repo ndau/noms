@@ -11,7 +11,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/ndau/graphql"
+	"github.com/attic-labs/graphql"
 	"github.com/ndau/noms/go/chunks"
 	"github.com/ndau/noms/go/marshal"
 	"github.com/ndau/noms/go/types"
