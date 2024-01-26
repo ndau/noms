@@ -6,7 +6,7 @@
 # Get
 
 ```
-git clone https://github.com/attic-labs/noms
+git clone https://github.com/ndau/noms
 ```
 
 # Build

@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/attic-labs/noms/go/chunks"
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/go/chunks"
+	"github.com/ndau/noms/go/d"
 )
 
 func newPersistingChunkSource(mt *memTable, haver chunkReader, p tablePersister, rl chan struct{}, stats *Stats) *persistingChunkSource {

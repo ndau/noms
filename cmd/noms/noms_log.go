@@ -14,18 +14,18 @@ import (
 	"strings"
 	"time"
 
-	"github.com/attic-labs/kingpin"
-	"github.com/attic-labs/noms/cmd/util"
-	"github.com/attic-labs/noms/go/config"
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/datas"
-	"github.com/attic-labs/noms/go/diff"
-	"github.com/attic-labs/noms/go/spec"
-	"github.com/attic-labs/noms/go/types"
-	"github.com/attic-labs/noms/go/util/datetime"
-	"github.com/attic-labs/noms/go/util/functions"
-	"github.com/attic-labs/noms/go/util/outputpager"
-	"github.com/attic-labs/noms/go/util/writers"
+	"github.com/ndau/kingpin"
+	"github.com/ndau/noms/cmd/util"
+	"github.com/ndau/noms/go/config"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/datas"
+	"github.com/ndau/noms/go/diff"
+	"github.com/ndau/noms/go/spec"
+	"github.com/ndau/noms/go/types"
+	"github.com/ndau/noms/go/util/datetime"
+	"github.com/ndau/noms/go/util/functions"
+	"github.com/ndau/noms/go/util/outputpager"
+	"github.com/ndau/noms/go/util/writers"
 	"github.com/mgutz/ansi"
 )
 
@@ -47,7 +47,7 @@ func nomsLog(noms *kingpin.Application) (*kingpin.CmdClause, util.KingpinHandler
 	var color int
 	var tzName string
 
-	cmd := noms.Command("log", "Lists the history of changes to a path -- see Spelling Values at https://github.com/attic-labs/noms/blob/master/doc/spelling.md.")
+	cmd := noms.Command("log", "Lists the history of changes to a path -- see Spelling Values at https://github.com/ndau/noms/blob/master/doc/spelling.md.")
 	cmd.Flag("color", "set to 1 to force color on, 0 to force off").Default("-1").IntVar(&color)
 
 	cmd.Flag("max-lines", "max number of lines to show per commit (-1 for all lines)").Default("9").IntVar(&o.maxLines)

@@ -2,9 +2,9 @@
 
 An experimental bridge between Noms and [GraphQL](http://graphql.org/)
 
-This is to be used with https://github.com/attic-labs/graphql which is a fork of https://github.com/graphql-go/graphql to handle Noms values. It disables some validations that do not work for Noms due to Noms being schemaless (or more precisely  the schema is a function of the value in the dataset).
+This is to be used with https://github.com/ndau/graphql which is a fork of https://github.com/graphql-go/graphql to handle Noms values. It disables some validations that do not work for Noms due to Noms being schemaless (or more precisely  the schema is a function of the value in the dataset).
 
-*ngql* provides an API to convert Noms types/values to and from GraphQL types/values, as well as some functions that can be used to implement a GraphQL endpoint using https://github.com/attic-labs/graphql.
+*ngql* provides an API to convert Noms types/values to and from GraphQL types/values, as well as some functions that can be used to implement a GraphQL endpoint using https://github.com/ndau/graphql.
 
 # Status
 

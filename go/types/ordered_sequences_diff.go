@@ -7,8 +7,8 @@ package types
 import (
 	"sync"
 
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/util/functions"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/util/functions"
 )
 
 type DiffChangeType uint8
@@ -44,7 +44,7 @@ func orderedSequenceDiffBest(last orderedSequence, current orderedSequence, chan
 	lrStopChan := make(chan struct{}, 1)
 	tdStopChan := make(chan struct{}, 1)
 
-	// Ensure all diff functions have finished doing work by the time this function returns, otherwise database reads might cause deadlock - e.g. https://github.com/attic-labs/noms/issues/2165.
+	// Ensure all diff functions have finished doing work by the time this function returns, otherwise database reads might cause deadlock - e.g. https://github.com/ndau/noms/issues/2165.
 	wg := &sync.WaitGroup{}
 
 	defer func() {
@@ -113,7 +113,7 @@ func orderedSequenceDiffTopDown(last orderedSequence, current orderedSequence, c
 	return orderedSequenceDiffInternalNodes(last, current, changes, stopChan)
 }
 
-// TODO - something other than the literal edit-distance, which is way too much cpu work for this case - https://github.com/attic-labs/noms/issues/2027
+// TODO - something other than the literal edit-distance, which is way too much cpu work for this case - https://github.com/ndau/noms/issues/2027
 func orderedSequenceDiffInternalNodes(last orderedSequence, current orderedSequence, changes chan<- ValueChanged, stopChan <-chan struct{}) bool {
 	if last.treeLevel() > current.treeLevel() {
 		lastChild := last.getCompositeChildSequence(0, uint64(last.seqLen())).(orderedSequence)

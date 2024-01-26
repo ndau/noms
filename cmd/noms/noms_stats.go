@@ -7,16 +7,16 @@ package main
 import (
 	"fmt"
 
-	"github.com/attic-labs/kingpin"
+	"github.com/ndau/kingpin"
 
-	"github.com/attic-labs/noms/cmd/util"
-	"github.com/attic-labs/noms/go/config"
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/cmd/util"
+	"github.com/ndau/noms/go/config"
+	"github.com/ndau/noms/go/d"
 )
 
 func nomsStats(noms *kingpin.Application) (*kingpin.CmdClause, util.KingpinHandler) {
 	stats := noms.Command("stats", "Shows stats summary for a Noms Database.")
-	database := stats.Arg("database", "See Spelling Objects at https://github.com/attic-labs/noms/blob/master/doc/spelling.md for details on the database argument.").Required().String()
+	database := stats.Arg("database", "See Spelling Objects at https://github.com/ndau/noms/blob/master/doc/spelling.md for details on the database argument.").Required().String()
 
 	return stats, func(input string) int {
 		cfg := config.NewResolver()

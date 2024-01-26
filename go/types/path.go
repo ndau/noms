@@ -13,8 +13,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/hash"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/hash"
 )
 
 // For an annotation like @type, 1st capture group is the annotation.
@@ -27,7 +27,7 @@ var annotationRe = regexp.MustCompile(`^([a-z]+)(\(([\w\-"']*)\))?`)
 // globally, see Spec.
 //
 // For more details, see:
-// https://github.com/attic-labs/noms/blob/master/doc/spelling.md.
+// https://github.com/ndau/noms/blob/master/doc/spelling.md.
 type Path []PathPart
 
 type PathPart interface {

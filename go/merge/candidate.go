@@ -7,8 +7,8 @@ package merge
 import (
 	"fmt"
 
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/types"
 )
 
 // candidate represents a collection that is a candidate to be merged. This

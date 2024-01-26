@@ -6,13 +6,13 @@
 
 This is a short introduction to using Noms from Go. It should only take a few minutes if you have some familiarity with Go.
 
-During the tour, you can refer to the complete [Go SDK Reference](https://godoc.org/github.com/attic-labs/noms) for more information on anything you see.
+During the tour, you can refer to the complete [Go SDK Reference](https://godoc.org/github.com/ndau/noms) for more information on anything you see.
 
 
 
 ## Requirements
 
-* [Noms command-line tools](https://github.com/attic-labs/noms#setup)
+* [Noms command-line tools](https://github.com/ndau/noms#setup)
 * [Go v1.6+](https://golang.org/dl/)
 * Ensure your [$GOPATH](https://github.com/golang/go/wiki/GOPATH) is configured
 
@@ -25,7 +25,7 @@ Let's create a local database to play with:
 > noms serve /tmp/noms-go-tour
 ```
 
-## [Database](https://github.com/attic-labs/noms/blob/master/go/datas/database.go)
+## [Database](https://github.com/ndau/noms/blob/master/go/datas/database.go)
 Leave the server running, and in a separate terminal:
 
 ```sh
@@ -42,7 +42,7 @@ import (
   "fmt"
   "os"
 
-  "github.com/attic-labs/noms/go/spec"
+  "github.com/ndau/noms/go/spec"
 )
 
 func main() {
@@ -63,10 +63,10 @@ Now let's run it:
 
 If you did not leave the server running you would see output of ```Could not access database``` here, otherwise your program should exit cleanly.
 
-See [Spelling in Noms](https://github.com/attic-labs/noms/blob/master/doc/spelling.md) for more information on database spec strings.
+See [Spelling in Noms](https://github.com/ndau/noms/blob/master/doc/spelling.md) for more information on database spec strings.
 
 
-## [Dataset](https://github.com/attic-labs/noms/blob/master/go/dataset/dataset.go)
+## [Dataset](https://github.com/ndau/noms/blob/master/go/dataset/dataset.go)
 
 Datasets are the main interface you'll use to work with Noms. Let's update our example to use a Dataset spec string:
 
@@ -77,7 +77,7 @@ import (
   "fmt"
   "os"
 
-  "github.com/attic-labs/noms/go/spec"
+  "github.com/ndau/noms/go/spec"
 )
 
 func main() {
@@ -110,8 +110,8 @@ import (
   "fmt"
   "os"
 
-  "github.com/attic-labs/noms/go/spec"
-  "github.com/attic-labs/noms/go/types"
+  "github.com/ndau/noms/go/spec"
+  "github.com/ndau/noms/go/types"
 )
 
 func newPerson(givenName string, male bool) types.Struct {
@@ -166,8 +166,8 @@ import (
   "fmt"
   "os"
 
-  "github.com/attic-labs/noms/go/spec"
-  "github.com/attic-labs/noms/go/types"
+  "github.com/ndau/noms/go/spec"
+  "github.com/ndau/noms/go/types"
 )
 
 func main() {
@@ -238,8 +238,8 @@ import (
   "fmt"
   "os"
 
-  "github.com/attic-labs/noms/go/spec"
-  "github.com/attic-labs/noms/go/types"
+  "github.com/ndau/noms/go/spec"
+  "github.com/ndau/noms/go/types"
 )
 
 func main() {
@@ -308,8 +308,8 @@ Parent: None
 
 ## Values
 
-Noms supports a [variety of datatypes](https://github.com/attic-labs/noms/blob/master/doc/intro.md#types) beyond List, Struct, String, and Bool we used above.
+Noms supports a [variety of datatypes](https://github.com/ndau/noms/blob/master/doc/intro.md#types) beyond List, Struct, String, and Bool we used above.
 
 ## Samples
 
-You can continue learning more about the Noms Go SDK by looking at the documentation and by reviewing the [samples](https://github.com/attic-labs/noms/blob/master/samples/go). The [hr sample](https://github.com/attic-labs/noms/blob/master/samples/go/hr) is a more complete implementation of our example above and will help you to see further usage of the other datatypes.
+You can continue learning more about the Noms Go SDK by looking at the documentation and by reviewing the [samples](https://github.com/ndau/noms/blob/master/samples/go). The [hr sample](https://github.com/ndau/noms/blob/master/samples/go/hr) is a more complete implementation of our example above and will help you to see further usage of the other datatypes.

@@ -10,7 +10,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/types"
 )
 
 // ToJSON encodes a Noms value as JSON.

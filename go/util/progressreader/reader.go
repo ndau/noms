@@ -9,7 +9,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/attic-labs/noms/go/util/status"
+	"github.com/ndau/noms/go/util/status"
 )
 
 type Callback func(seen uint64)

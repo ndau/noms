@@ -10,8 +10,8 @@ import (
 	"os"
 	"path"
 
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/util/exit"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/util/exit"
 	"github.com/stretchr/testify/suite"
 )
 

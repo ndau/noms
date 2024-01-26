@@ -9,10 +9,10 @@ import (
 	"encoding/json"
 	"io"
 
-	"github.com/attic-labs/graphql"
-	"github.com/attic-labs/graphql/gqlerrors"
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/graphql"
+	"github.com/ndau/graphql/gqlerrors"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/types"
 )
 
 const (

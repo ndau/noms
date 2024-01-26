@@ -11,7 +11,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/attic-labs/noms/go/spec"
+	"github.com/ndau/noms/go/spec"
 	"github.com/stretchr/testify/assert"
 )
 

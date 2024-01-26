@@ -10,7 +10,7 @@ This is a quick introduction to the Noms command-line interface. It should only 
 
 ## Install Noms
 
-... if you haven't already. Follow the instructions [here](https://github.com/attic-labs/noms#setup).
+... if you haven't already. Follow the instructions [here](https://github.com/ndau/noms#setup).
 
 ## The `noms` command
 
@@ -43,7 +43,7 @@ Without any arguments, `noms` lists out all available commands. To get informati
 > noms help sync
 usage: noms sync [options] <source-object> <dest-dataset>
 
-See Spelling Objects at https://github.com/attic-labs/noms/blob/master/doc/spelling.md for details on the object and dataset arguments.
+See Spelling Objects at https://github.com/ndau/noms/blob/master/doc/spelling.md for details on the object and dataset arguments.
 
 ...
 ```
@@ -128,7 +128,7 @@ films
 We can now make an edit locally:
 
 ```shell
-> go install github.com/attic-labs/noms/samples/go/csv/...
+> go install github.com/ndau/noms/samples/go/csv/...
 > csv-export /tmp/noms::films > /tmp/film-locations.csv
 ```
 

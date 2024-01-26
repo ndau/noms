@@ -10,16 +10,16 @@ import (
 	"os"
 	"regexp"
 
-	"github.com/attic-labs/kingpin"
+	"github.com/ndau/kingpin"
 
-	"github.com/attic-labs/noms/cmd/util"
-	"github.com/attic-labs/noms/go/config"
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/datas"
-	"github.com/attic-labs/noms/go/merge"
-	"github.com/attic-labs/noms/go/types"
-	"github.com/attic-labs/noms/go/util/status"
-	"github.com/attic-labs/noms/go/util/verbose"
+	"github.com/ndau/noms/cmd/util"
+	"github.com/ndau/noms/go/config"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/datas"
+	"github.com/ndau/noms/go/merge"
+	"github.com/ndau/noms/go/types"
+	"github.com/ndau/noms/go/util/status"
+	"github.com/ndau/noms/go/util/verbose"
 )
 
 var (
@@ -29,7 +29,7 @@ var (
 func nomsMerge(noms *kingpin.Application) (*kingpin.CmdClause, util.KingpinHandler) {
 	cmd := noms.Command("merge", "Merges two datasets.")
 	resolver := cmd.Flag("policy", "Conflict resolution policy for merging - defaults to 'n', which means no resolution strategy will be applied. Supported values are 'l' (left), 'r' (right) and 'p' (prompt). 'prompt' will bring up a simple command-line prompt allowing you to resolve conflicts by choosing between 'l' or 'r' on a case-by-case basis.").Default("n").String()
-	db := cmd.Arg("db", "database to work with - see Spelling Databases at https://github.com/attic-labs/noms/blob/master/doc/spelling.md").Required().String()
+	db := cmd.Arg("db", "database to work with - see Spelling Databases at https://github.com/ndau/noms/blob/master/doc/spelling.md").Required().String()
 	left := cmd.Arg("left", "left dataset name").Required().String()
 	right := cmd.Arg("right", "right dataset name").Required().String()
 

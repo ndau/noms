@@ -7,7 +7,7 @@ package chunks
 import (
 	"io"
 
-	"github.com/attic-labs/noms/go/hash"
+	"github.com/ndau/noms/go/hash"
 )
 
 // ChunkStore is the core storage abstraction in noms. We can put data

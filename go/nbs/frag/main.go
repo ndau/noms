@@ -9,18 +9,18 @@ import (
 	"log"
 	"sync"
 
-	"github.com/attic-labs/kingpin"
+	"github.com/ndau/kingpin"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/dustin/go-humanize"
 
-	"github.com/attic-labs/noms/go/datas"
-	"github.com/attic-labs/noms/go/hash"
-	"github.com/attic-labs/noms/go/nbs"
-	"github.com/attic-labs/noms/go/types"
-	"github.com/attic-labs/noms/go/util/profile"
+	"github.com/ndau/noms/go/datas"
+	"github.com/ndau/noms/go/hash"
+	"github.com/ndau/noms/go/nbs"
+	"github.com/ndau/noms/go/types"
+	"github.com/ndau/noms/go/util/profile"
 )
 
 var (

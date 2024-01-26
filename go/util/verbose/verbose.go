@@ -7,7 +7,7 @@ package verbose
 import (
 	"log"
 
-	"github.com/attic-labs/kingpin"
+	"github.com/ndau/kingpin"
 )
 
 var (

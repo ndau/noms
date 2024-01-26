@@ -31,5 +31,5 @@ deploy:
   - linux.zip
   - osx.zip
   on:
-    repo: attic-labs/noms
+    repo: ndau/noms
     tags: true

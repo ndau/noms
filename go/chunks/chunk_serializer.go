@@ -9,8 +9,8 @@ import (
 	"encoding/binary"
 	"io"
 
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/hash"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/hash"
 )
 
 /*

@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/attic-labs/noms/go/chunks"
-	"github.com/attic-labs/noms/go/constants"
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/hash"
-	"github.com/attic-labs/noms/go/util/sizecache"
+	"github.com/ndau/noms/go/chunks"
+	"github.com/ndau/noms/go/constants"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/hash"
+	"github.com/ndau/noms/go/util/sizecache"
 )
 
 // ValueReader is an interface that knows how to read Noms Values, e.g.

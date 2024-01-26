@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/attic-labs/kingpin"
-	"github.com/attic-labs/noms/go/util/exit"
+	"github.com/ndau/kingpin"
+	"github.com/ndau/noms/go/util/exit"
 )
 
 func CheckError(err error) {

@@ -7,7 +7,7 @@ package types
 import (
 	"bytes"
 
-	"github.com/attic-labs/noms/go/hash"
+	"github.com/ndau/noms/go/hash"
 )
 
 type ValueCallback func(v Value)

@@ -11,11 +11,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/attic-labs/graphql"
-	"github.com/attic-labs/noms/go/chunks"
-	"github.com/attic-labs/noms/go/marshal"
-	"github.com/attic-labs/noms/go/types"
-	"github.com/attic-labs/noms/go/util/test"
+	"github.com/ndau/graphql"
+	"github.com/ndau/noms/go/chunks"
+	"github.com/ndau/noms/go/marshal"
+	"github.com/ndau/noms/go/types"
+	"github.com/ndau/noms/go/util/test"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
 )

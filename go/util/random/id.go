@@ -4,7 +4,7 @@ import (
 	"crypto/rand"
 	"encoding/hex"
 
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/go/d"
 )
 
 var (

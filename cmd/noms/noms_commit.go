@@ -9,12 +9,12 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/attic-labs/kingpin"
-	"github.com/attic-labs/noms/cmd/util"
-	"github.com/attic-labs/noms/go/config"
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/datas"
-	"github.com/attic-labs/noms/go/spec"
+	"github.com/ndau/kingpin"
+	"github.com/ndau/noms/cmd/util"
+	"github.com/ndau/noms/go/config"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/datas"
+	"github.com/ndau/noms/go/spec"
 )
 
 func nomsCommit(noms *kingpin.Application) (*kingpin.CmdClause, util.KingpinHandler) {
@@ -22,8 +22,8 @@ func nomsCommit(noms *kingpin.Application) (*kingpin.CmdClause, util.KingpinHand
 	allowDupe := commit.Flag("allow-dupe", "creates a new commit, even if it would be identical (modulo metadata and parents) to the existing HEAD").Bool()
 	message := commit.Flag("message", "commit message").String()
 	date := commit.Flag("date", "commit date formatted as 2019-08-08T21:52:46Z - defaults to current date").String()
-	path := commit.Arg("absolute-path", "absolute path to value to commit - see See Spelling Objects at https://github.com/attic-labs/noms/blob/master/doc/spelling.md").Required().String()
-	ds := commit.Arg("dataset", "dataset spec to commit to - see Spelling Datasets at https://github.com/attic-labs/noms/blob/master/doc/spelling.md").Required().String()
+	path := commit.Arg("absolute-path", "absolute path to value to commit - see See Spelling Objects at https://github.com/ndau/noms/blob/master/doc/spelling.md").Required().String()
+	ds := commit.Arg("dataset", "dataset spec to commit to - see Spelling Datasets at https://github.com/ndau/noms/blob/master/doc/spelling.md").Required().String()
 
 	return commit, func(input string) int {
 		cfg := config.NewResolver()

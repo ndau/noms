@@ -16,7 +16,7 @@ Noms uses [Go modules](https://github.com/golang/go/wiki/Modules) a new feature 
 
 ```shell
 cd <any directory other than $GOPATH>
-git clone https://github.com/attic-labs/noms
+git clone https://github.com/ndau/noms
 cd noms
 go install ./cmd/noms
 go test ./...
@@ -28,7 +28,7 @@ Noms is open source software, licensed under the [Apache License, Version 2.0](L
 
 ## Contributing code
 
-Due to legal reasons, all contributors must sign a contributor agreement, either for an [individual](https://attic-labs.github.io/ca/individual.html) or [corporation](https://attic-labs.github.io/ca/corporation.html), before a pull request can be accepted.
+Due to legal reasons, all contributors must sign a contributor agreement, either for an [individual](https://ndau.github.io/ca/individual.html) or [corporation](https://ndau.github.io/ca/corporation.html), before a pull request can be accepted.
 
 ## Languages
 
@@ -48,7 +48,7 @@ In general, for Public API in Noms, we use the Go-style of returning errors by d
 
 For non-exposed code, we do provide, and use, some wrappers to do Exception-style error handling. There *must* be an overriding rationale for using this style, however. One reason to use the Exception-style is that the current code doesn't know how to proceed and needs to panic, but you want to signal that a calling function somewhere up the stack might be able to recover from the failure and continue.
 
-For these cases, please use the following family of functions to 'raise' a 'catchable' error (see [go/d/try.go](https://godoc.org/github.com/attic-labs/noms/go/d)):
+For these cases, please use the following family of functions to 'raise' a 'catchable' error (see [go/d/try.go](https://godoc.org/github.com/ndau/noms/go/d)):
 
 	* d.PanicIfError()
 	* d.PanicIfTrue()
@@ -60,10 +60,10 @@ You might see some old code that uses functions that seem similar starting with 
 
 We follow a code review protocol dervied from the one that the [Chromium team](https://www.chromium.org/) uses:
 
-1. Create a GitHub fork of the repo you want to modify (e.g., fork `https://github.com/attic-labs/noms` to `https://github.com/<username>/noms`).
+1. Create a GitHub fork of the repo you want to modify (e.g., fork `https://github.com/ndau/noms` to `https://github.com/<username>/noms`).
 2. Add your own fork as a remote to your github repo: `git remote add <username> https://github.com/<username>/noms`.
 3. Push your changes to a branch at your fork: `git push <username> <branch>`
-4. Create a PR using the branch you just created. Usually you can do this by just navigating to https://github.com/attic-labs/noms in a browser - GitHub recognizes the new branch and offers to create a PR for you.
+4. Create a PR using the branch you just created. Usually you can do this by just navigating to https://github.com/ndau/noms in a browser - GitHub recognizes the new branch and offers to create a PR for you.
 5. When you're ready for review, make a comment in the issue asking for a review. Sometimes people won't review until you do this because we're not sure if you think the PR is ready for review.
 6. Iterate with your reviewer using the normal Github review flow.
 7. Once the reviewer is happy with the changes, they will submit them.
@@ -84,6 +84,6 @@ To run the tests yourself, use the `-perf` and `-v` flag to `go test`, e.g.:
 
 * `go test -v ./samples/go/csv/... -perf mem`
 
-See https://godoc.org/github.com/attic-labs/noms/go/perf/suite for full documentation and flags.
+See https://godoc.org/github.com/ndau/noms/go/perf/suite for full documentation and flags.
 
 To ask Jenkins to run the perf tests for you, reply (no quotes) "Jenkins: perf this" to your PR. Your results will be viewable at http://perf.noms.io/?ds=http://demo.noms.io/perf::pr_$your-pull-request-number/csv-import. Again, only a committer can do this.

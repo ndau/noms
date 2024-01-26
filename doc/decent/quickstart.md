@@ -22,7 +22,7 @@ The steps you’ll need to take are:
     your problem so that changes commute in order to make merging
     easier.  
 
-   In our [p2p sample](https://github.com/attic-labs/noms/blob/master/doc/decent/demo-p2p-chat.md) application, all peers periodically broadcast their HEAD on a known channel using [IPFS pubsub](https://ipfs.io/blog/25-pubsub/), pull each others' changes immediately, and avoid conflicts by using operations that can be resolved with Noms' built in merge policies.
+   In our [p2p sample](https://github.com/ndau/noms/blob/master/doc/decent/demo-p2p-chat.md) application, all peers periodically broadcast their HEAD on a known channel using [IPFS pubsub](https://ipfs.io/blog/25-pubsub/), pull each others' changes immediately, and avoid conflicts by using operations that can be resolved with Noms' built in merge policies.
    
    This is basically the simplest possible approach, but lots of options are possible. For example, an alternate approach for discoverability could be to keep a registry of all participating nodes in a blockchain (e.g., by storing them in an Ethereum smart contract). One could store either the current HEAD of each node (updated whenever the node changes state), or just an IPNS name that the node is writing to.
     
@@ -36,7 +36,7 @@ The steps you’ll need to take are:
 
 3. Vendor the code into your project. 
 4. Decide which type of storage you'd like to use: memory (convenient for playing around), disk, IPFS, or S3. (If you want to implement a store on top of another type of storage that's possible too; email us or reach out on slack and we can help.)
-5. Set up and instantiate a database for your storage. Generally, you use the spec package to parse a [dataset spec](https://github.com/attic-labs/noms/blob/master/doc/spelling.md) like `mem::mydataset` which you can then ask for  [`Database`](https://github.com/attic-labs/noms/blob/master/go/datas/database.go) and [`Dataset`](https://github.com/attic-labs/noms/blob/master/go/datas/dataset.go).
+5. Set up and instantiate a database for your storage. Generally, you use the spec package to parse a [dataset spec](https://github.com/ndau/noms/blob/master/doc/spelling.md) like `mem::mydataset` which you can then ask for  [`Database`](https://github.com/ndau/noms/blob/master/go/datas/database.go) and [`Dataset`](https://github.com/ndau/noms/blob/master/go/datas/dataset.go).
    * **Memory**: no setup required, just instantiate it:
 
 ```go
@@ -55,7 +55,7 @@ sp := spec.ForDataset("/path/to/chunks::test")  // Dataset name is "test"
 sp := spec.ForDataset("ipfs:/path/to/ipfs_repo::test")  // Dataset name is "test"
 ```
 
-   * **S3**: Follow the [S3 setup instructions](https://github.com/attic-labs/noms/blob/master/go/nbs/NBS-on-AWS.md) then instantiate a database and dataset:
+   * **S3**: Follow the [S3 setup instructions](https://github.com/ndau/noms/blob/master/go/nbs/NBS-on-AWS.md) then instantiate a database and dataset:
 
 ```go
 sess  := session.Must(session.NewSession(aws.NewConfig().WithRegion("us-west-2")))
@@ -64,7 +64,7 @@ database := datas.NewDatabase(store)
 dataset := database.GetDataset("aws://dynamo-table:s3-bucket/store-name::test")  // Dataset name is "test"
 ```
 
-7. Implement using the [Go API](https://github.com/attic-labs/noms/blob/master/doc/go-tour.md). If you're just playing around you could try something like this:
+7. Implement using the [Go API](https://github.com/ndau/noms/blob/master/doc/go-tour.md). If you're just playing around you could try something like this:
 
 ```go
     package main
@@ -73,8 +73,8 @@ dataset := database.GetDataset("aws://dynamo-table:s3-bucket/store-name::test") 
         "fmt"
         "os"
     
-        "github.com/attic-labs/noms/go/spec"
-        "github.com/attic-labs/noms/go/types"
+        "github.com/ndau/noms/go/spec"
+        "github.com/ndau/noms/go/types"
     )
     
     // Usage: quickstart /path/to/store::ds
@@ -119,7 +119,7 @@ dataset := database.GetDataset("aws://dynamo-table:s3-bucket/store-name::test") 
     }
 ```
 
-8. You can inspect data that you've committed via the [noms command-line interface](https://github.com/attic-labs/noms/blob/master/doc/cli-tour.md). For example:
+8. You can inspect data that you've committed via the [noms command-line interface](https://github.com/ndau/noms/blob/master/doc/cli-tour.md). For example:
 
 ```shell
 noms log /path/to/store::ds
@@ -129,4 +129,4 @@ noms show /path/to/store::ds
 > Note that Memory tables won't be inspectable because they exist only in the memory of the process that created them. 
 
 9. Implement pull and merge. The [pull API](../../go/datas/pull.go) is used pull changes from a peer and the [merge API](../../go/merge/) is used to merge changes before commit. There's an [example of merging in the IPFS-based-chat sample
-    app](https://github.com/attic-labs/noms/blob/master/samples/go/ipfs-chat/pubsub.go). 
+    app](https://github.com/ndau/noms/blob/master/samples/go/ipfs-chat/pubsub.go). 

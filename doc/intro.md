@@ -42,7 +42,7 @@ A database has two responsibilities: it provides storage of [content-addressed](
 
 A Noms database can be implemented on top of any underlying storage system that provides key/value storage with at least optional optimistic concurrency. We only use optimistic concurrency to store the current value of each dataset. Chunks themselves are immutable.
 
-We have implementations of Noms databases on top of our own file-backed store [Noms Block Store (NBS)](https://github.com/attic-labs/noms/tree/master/go/nbs) (usually used locally), our own [HTTP protocol](https://github.com/attic-labs/noms/blob/master/go/datas/database_server.go) (used for working with a remote database), [Amazon DynamoDB](https://aws.amazon.com/dynamodb/), and [memory](https://github.com/attic-labs/noms/blob/master/go/chunks/memory_store.go) (mainly used for testing).
+We have implementations of Noms databases on top of our own file-backed store [Noms Block Store (NBS)](https://github.com/ndau/noms/tree/master/go/nbs) (usually used locally), our own [HTTP protocol](https://github.com/ndau/noms/blob/master/go/datas/database_server.go) (used for working with a remote database), [Amazon DynamoDB](https://aws.amazon.com/dynamodb/), and [memory](https://github.com/ndau/noms/blob/master/go/chunks/memory_store.go) (mainly used for testing).
 
 Here's an example of creating an http-backed database using the [Go Noms SDK](go-tour.md):
 
@@ -53,7 +53,7 @@ import (
   "fmt"
   "os"
 
-  "github.com/attic-labs/noms/go/spec"
+  "github.com/ndau/noms/go/spec"
 )
 
 func main() {
@@ -124,7 +124,7 @@ Types serve several purposes in Noms:
 
 ### Refs vs Hashes
 
-A _hash_ in Noms is just like the hashes used elsewhere in computing: a short string of bytes that uniquely identifies a larger value. Every value in Noms has a hash. Noms currently uses the [sha2-512](https://github.com/attic-labs/noms/blob/master/go/hash/hash.go#L7) hash function, but that can change in future versions of the system.
+A _hash_ in Noms is just like the hashes used elsewhere in computing: a short string of bytes that uniquely identifies a larger value. Every value in Noms has a hash. Noms currently uses the [sha2-512](https://github.com/ndau/noms/blob/master/go/hash/hash.go#L7) hash function, but that can change in future versions of the system.
 
 A _ref_ is different in subtle, but important ways. A `Ref` is a part of the type system - a `Ref` is a value. Anywhere you can find a Noms value, you can find a `Ref`. For example, you can commit a `Ref<T>` to a dataset, but you can't commit a bare hash.
 
@@ -203,11 +203,11 @@ To start, we "chunk" the serialization of a larged sorted sequence by sliding a 
 
 At each position, we compute a hash of the bytes in the window. Any hash can be used, but in Noms a [rolling hash](https://en.wikipedia.org/wiki/Rolling_hash) is used for performance.
 
-Within each hash, we look for a pattern that has a known probability of occuring. If the pattern is found, that position is a _boundary_. We slide the window forward to the end of the containing item, and write a new _chunk_ containing the bytes between this boundary and the previous, if any. The resulting chunk is stored in a [content-addressed storage system](https://en.wikipedia.org/wiki/Content-addressable_storage). Again, any hash can be used for this, but in Noms [we use truncated SHA-512](https://github.com/attic-labs/noms/blob/master/go/hash/hash.go).
+Within each hash, we look for a pattern that has a known probability of occuring. If the pattern is found, that position is a _boundary_. We slide the window forward to the end of the containing item, and write a new _chunk_ containing the bytes between this boundary and the previous, if any. The resulting chunk is stored in a [content-addressed storage system](https://en.wikipedia.org/wiki/Content-addressable_storage). Again, any hash can be used for this, but in Noms [we use truncated SHA-512](https://github.com/ndau/noms/blob/master/go/hash/hash.go).
 
 By adjusting the pattern we look for, we can control the average size of the chunks our tree will be decomposed into.
 
-In Noms, the pattern we look for is the [12 high bits being 1](https://github.com/attic-labs/noms/blob/master/go/types/rolling_value_hasher.go). Since this has a probability of 1/2^12, the average chunk size in Noms is 4kb.
+In Noms, the pattern we look for is the [12 high bits being 1](https://github.com/ndau/noms/blob/master/go/types/rolling_value_hasher.go). Since this has a probability of 1/2^12, the average chunk size in Noms is 4kb.
 
 Once we've created an initial pass of chunks this way, we build an index describing the contents of each of those chunks, and perform the chunking operation again on the serialization of that index. This continues recursively, until we are left with a node that doesn't chunk. This is the root of the tree.
 

@@ -37,7 +37,7 @@ for {
 }
 ```
 
-Noms has a default [merge policy](https://github.com/attic-labs/noms/blob/2d0e9e738370d49cc09e8fa6e290ceca1c3e2005/go/merge/three_way.go#L14) that covers many classes of concurrent operations. If the application restricts itself to only operations that are mergeable by this policy, then Noms can automatically merge all concurrent changes. In this case, the entire database is effectively a CRDT.
+Noms has a default [merge policy](https://github.com/ndau/noms/blob/2d0e9e738370d49cc09e8fa6e290ceca1c3e2005/go/merge/three_way.go#L14) that covers many classes of concurrent operations. If the application restricts itself to only operations that are mergeable by this policy, then Noms can automatically merge all concurrent changes. In this case, the entire database is effectively a CRDT.
 
 If this is not sufficient, then applications can create their own merge policies, implementing whatever merge is appropriate for their use case.
 

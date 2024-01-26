@@ -40,17 +40,17 @@ merging, applications typically do this continuously, automatically
 converging to a shared state.
 
 Your application uses a [Go client
-library](https://github.com/attic-labs/noms/blob/master/doc/go-tour.md)
+library](https://github.com/ndau/noms/blob/master/doc/go-tour.md)
 to interact with Noms data. There is also a [command-line
-interface](https://github.com/attic-labs/noms/blob/master/doc/cli-tour.md)
+interface](https://github.com/ndau/noms/blob/master/doc/cli-tour.md)
 for working with data and initial support for a [GraphQL-based query
-language](https://github.com/attic-labs/noms/blob/master/go/ngql/README.md).
+language](https://github.com/ndau/noms/blob/master/go/ngql/README.md).
 
 Some additional features include:
 * **Versioning**: It’s easy to use, compare, or revert to older database versions
 * **Efficient diffs**: diffing even huge datasets is efficient due to
   noms’ use of a novel BTree-like data structure called a [Prolly
-  Tree](https://github.com/attic-labs/noms/blob/master/doc/intro.md#prolly-trees-probabilistic-b-trees)
+  Tree](https://github.com/ndau/noms/blob/master/doc/intro.md#prolly-trees-probabilistic-b-trees)
 * **Efficient storage**: data are chunked and content-addressable, so
   there is exactly one copy of each chunk in the database, shared by
   other data that reference it. Small changes to massive data
@@ -59,7 +59,7 @@ Some additional features include:
  that uniquely represents the database at that moment - anyone can
  verify that a particular database hashes to the same value
 
-Read the [Noms design overview](https://github.com/attic-labs/noms/blob/master/doc/decent/intro.md).
+Read the [Noms design overview](https://github.com/ndau/noms/blob/master/doc/decent/intro.md).
 
 ## Status
 

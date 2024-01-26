@@ -13,7 +13,7 @@ import (
 	"io"
 	"sync"
 
-	"github.com/attic-labs/noms/go/chunks"
+	"github.com/ndau/noms/go/chunks"
 )
 
 /*
@@ -76,7 +76,7 @@ import (
    +----------------------+----------------------------------------+------------------+
 
      -Total Uncompressed Chunk Data is the sum of the uncompressed byte lengths of all contained chunk byte slices.
-     -Magic Number is the first 8 bytes of the SHA256 hash of "https://github.com/attic-labs/nbs".
+     -Magic Number is the first 8 bytes of the SHA256 hash of "https://github.com/ndau/nbs".
 
     NOTE: Unsigned integer quanities, hashes and hash suffix are all encoded big-endian
 

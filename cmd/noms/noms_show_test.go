@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/attic-labs/noms/go/chunks"
-	"github.com/attic-labs/noms/go/spec"
-	"github.com/attic-labs/noms/go/types"
-	"github.com/attic-labs/noms/go/util/clienttest"
-	"github.com/attic-labs/noms/go/util/test"
+	"github.com/ndau/noms/go/chunks"
+	"github.com/ndau/noms/go/spec"
+	"github.com/ndau/noms/go/types"
+	"github.com/ndau/noms/go/util/clienttest"
+	"github.com/ndau/noms/go/util/test"
 	"github.com/stretchr/testify/suite"
 )
 

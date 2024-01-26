@@ -9,12 +9,12 @@ import (
 	"io"
 	"os"
 
-	"github.com/attic-labs/kingpin"
+	"github.com/ndau/kingpin"
 
-	"github.com/attic-labs/noms/cmd/util"
-	"github.com/attic-labs/noms/go/config"
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/util/json"
+	"github.com/ndau/noms/cmd/util"
+	"github.com/ndau/noms/go/config"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/util/json"
 )
 
 func nomsJSON(noms *kingpin.Application) (*kingpin.CmdClause, util.KingpinHandler) {

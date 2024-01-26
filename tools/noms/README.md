@@ -25,4 +25,4 @@ Importing and using `noms.staging` handles determining where you should stage yo
 
 ## Develop
 
-* To run unittests: `python -m unittest discover -p "*_test.py" -s $GOPATH/src/github.com/attic-labs/noms/tools`
+* To run unittests: `python -m unittest discover -p "*_test.py" -s $GOPATH/src/github.com/ndau/noms/tools`
