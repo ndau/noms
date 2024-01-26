@@ -134,10 +134,16 @@ func handleWriteValue(w http.ResponseWriter, req *http.Request, ps URLParams, cs
 		verbose.Log("Wrote %d Kb as %d chunks from %s in %s", totalDataWritten/1024, chunkCount, req.RemoteAddr, time.Since(t1))
 	}()
 
+	verbose.Log("Debug: Deserialize chunkCount........: %d", chunkCount)
 	reader := bodyReader(req)
 	defer func() {
 		// Ensure all data on reader is consumed
-		io.Copy(ioutil.Discard, reader)
+		written, err := io.Copy(ioutil.Discard, reader)
+		if err != nil {
+			verbose.Log("Debug: io.Copy........: %s", err.Error())
+		} else {
+			verbose.Log("Debug: Written........: %d", written)
+		}
 		reader.Close()
 	}()
 	vdc := types.NewValidatingDecoder(cs)
@@ -150,6 +156,7 @@ func handleWriteValue(w http.ResponseWriter, req *http.Request, ps URLParams, cs
 		var err error
 		defer func() { errChan <- err; close(errChan) }()
 		defer close(chunkChan)
+		verbose.Log("Debug: Deserialize chunkCount........: %d", chunkCount)
 		err = chunks.Deserialize(reader, chunkChan)
 	}()
 
@@ -191,6 +198,7 @@ func handleWriteValue(w http.ResponseWriter, req *http.Request, ps URLParams, cs
 
 	if chunkCount > 0 {
 		types.PanicIfDangling(unresolvedRefs, cs)
+		verbose.Log("Debug: persistChunks......")
 		persistChunks(cs)
 	}
 

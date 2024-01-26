@@ -1,4 +1,4 @@
-FROM golang:latest AS build
+FROM golang:1.18.2-alpine3.16 AS build
 
 ENV NOMS_SRC=$GOPATH/src/github.com/ndau/noms
 ENV CGO_ENABLED=1
@@ -11,7 +11,13 @@ RUN go test github.com/ndau/noms/...
 RUN go install -v github.com/ndau/noms/cmd/noms
 RUN cp $GOPATH/bin/noms /bin/noms
 
-FROM alpine:latest
+# We're going to use our own noms.....
+COPY . .
+
+RUN go build ./cmd/noms
+RUN mv noms /bin
+
+FROM alpine:3.16.0
 
 COPY --from=build /bin/noms /bin/noms
 

@@ -7,6 +7,7 @@ package main
 import (
 	"bufio"
 	"bytes"
+	"fmt"
 	"io"
 
 	"github.com/attic-labs/noms/go/chunks"
@@ -67,6 +68,7 @@ func (fb fileBlockStore) Root() hash.Hash {
 }
 
 func (fb fileBlockStore) Commit(current, last hash.Hash) bool {
+	fmt.Println("Debug: fileBlockStore......")
 	fb.bw.Flush()
 	return true
 }

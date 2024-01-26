@@ -5,6 +5,7 @@
 package types
 
 import (
+	"fmt"
 	"sync"
 
 	"github.com/attic-labs/noms/go/chunks"
@@ -223,11 +224,11 @@ func (lvs *ValueStore) WriteValue(v Value) Ref {
 // ChunkStore in a way which attempts to locate children and grandchildren
 // sequentially together. The following invariants are retained:
 //
-// 1. For any given chunk currently in the buffer, only direct children of the
-//    chunk may also be presently buffered (any grandchildren will have been
-//    flushed).
-// 2. The total data occupied by buffered chunks does not exceed
-//    lvs.bufferedChunksMax
+//  1. For any given chunk currently in the buffer, only direct children of the
+//     chunk may also be presently buffered (any grandchildren will have been
+//     flushed).
+//  2. The total data occupied by buffered chunks does not exceed
+//     lvs.bufferedChunksMax
 func (lvs *ValueStore) bufferChunk(v Value, c chunks.Chunk, height uint64) {
 	lvs.bufferMu.Lock()
 	defer lvs.bufferMu.Unlock()
@@ -316,6 +317,7 @@ func (lvs *ValueStore) Rebase() {
 // rebased. Until Commit() succeeds, no work of the ValueStore will be visible
 // to other readers of the underlying ChunkStore.
 func (lvs *ValueStore) Commit(current, last hash.Hash) bool {
+	fmt.Println("Debug: ValueStore......")
 	return func() bool {
 		lvs.bufferMu.Lock()
 		defer lvs.bufferMu.Unlock()

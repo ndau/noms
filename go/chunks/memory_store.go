@@ -5,6 +5,7 @@
 package chunks
 
 import (
+	"fmt"
 	"sync"
 
 	"github.com/attic-labs/noms/go/constants"
@@ -165,6 +166,7 @@ func (ms *MemoryStoreView) Root() hash.Hash {
 }
 
 func (ms *MemoryStoreView) Commit(current, last hash.Hash) bool {
+	fmt.Println("Debug: MemoryStoreView......")
 	ms.mu.Lock()
 	defer ms.mu.Unlock()
 	if last != ms.rootHash {

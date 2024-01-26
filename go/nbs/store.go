@@ -362,6 +362,7 @@ func (nbs *NomsBlockStore) Root() hash.Hash {
 }
 
 func (nbs *NomsBlockStore) Commit(current, last hash.Hash) bool {
+	fmt.Println("Debug: NomsBlockStore......")
 	t1 := time.Now()
 	defer nbs.stats.CommitLatency.SampleTimeSince(t1)
 

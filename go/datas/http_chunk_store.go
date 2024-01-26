@@ -446,6 +446,7 @@ func (hcs *httpChunkStore) getRoot(checkVers bool) (root hash.Hash, vers string)
 }
 
 func (hcs *httpChunkStore) Commit(current, last hash.Hash) bool {
+	fmt.Println("Debug: httpChunkStore......")
 	hcs.rootMu.Lock()
 	defer hcs.rootMu.Unlock()
 	hcs.cacheMu.Lock()
