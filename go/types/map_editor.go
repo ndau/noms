@@ -7,7 +7,7 @@ package types
 import (
 	"sort"
 
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/go/d"
 )
 
 // MapEditor allows for efficient editing of Map-typed prolly trees. Edits

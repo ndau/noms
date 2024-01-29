@@ -4,7 +4,7 @@
 
 package types
 
-import "github.com/attic-labs/noms/go/hash"
+import "github.com/ndau/noms/go/hash"
 
 var getHashOverride func(v Value) hash.Hash
 

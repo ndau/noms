@@ -7,7 +7,7 @@ package types
 import (
 	"sync/atomic"
 
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/go/d"
 )
 
 // List represents a list or an array of Noms values. A list can contain zero or more values of zero

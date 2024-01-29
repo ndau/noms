@@ -8,11 +8,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/attic-labs/noms/go/chunks"
-	"github.com/attic-labs/noms/go/datas"
-	"github.com/attic-labs/noms/go/spec"
-	"github.com/attic-labs/noms/go/types"
-	"github.com/attic-labs/noms/go/util/verbose"
+	"github.com/ndau/noms/go/chunks"
+	"github.com/ndau/noms/go/datas"
+	"github.com/ndau/noms/go/spec"
+	"github.com/ndau/noms/go/types"
+	"github.com/ndau/noms/go/util/verbose"
 )
 
 type Resolver struct {

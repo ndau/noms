@@ -8,12 +8,12 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/attic-labs/noms/go/chunks"
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/hash"
-	"github.com/attic-labs/noms/go/merge"
-	"github.com/attic-labs/noms/go/types"
-	"github.com/attic-labs/noms/go/util/random"
+	"github.com/ndau/noms/go/chunks"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/hash"
+	"github.com/ndau/noms/go/merge"
+	"github.com/ndau/noms/go/types"
+	"github.com/ndau/noms/go/util/random"
 )
 
 type database struct {
@@ -59,7 +59,7 @@ func (db *database) StatsSummary() string {
 
 func (db *database) Flush() {
 	// TODO: This is a pretty ghetto hack - do better.
-	// See: https://github.com/attic-labs/noms/issues/3530
+	// See: https://github.com/ndau/noms/issues/3530
 	ds := db.GetDataset(fmt.Sprintf("-/flush/%s", random.Id()))
 	r := db.WriteValue(types.Bool(true))
 	ds, err := db.CommitValue(ds, r)

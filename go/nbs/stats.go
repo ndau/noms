@@ -7,7 +7,7 @@ package nbs
 import (
 	"fmt"
 
-	"github.com/attic-labs/noms/go/metrics"
+	"github.com/ndau/noms/go/metrics"
 )
 
 type Stats struct {

@@ -7,7 +7,7 @@ package types
 import (
 	"encoding/binary"
 
-	"github.com/attic-labs/noms/go/hash"
+	"github.com/ndau/noms/go/hash"
 )
 
 // String is a Noms Value wrapper around the primitive string type.

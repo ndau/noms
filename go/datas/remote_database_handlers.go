@@ -18,13 +18,13 @@ import (
 	"strings"
 	"time"
 
-	"github.com/attic-labs/noms/go/chunks"
-	"github.com/attic-labs/noms/go/constants"
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/hash"
-	"github.com/attic-labs/noms/go/ngql"
-	"github.com/attic-labs/noms/go/types"
-	"github.com/attic-labs/noms/go/util/verbose"
+	"github.com/ndau/noms/go/chunks"
+	"github.com/ndau/noms/go/constants"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/hash"
+	"github.com/ndau/noms/go/ngql"
+	"github.com/ndau/noms/go/types"
+	"github.com/ndau/noms/go/util/verbose"
 	"github.com/golang/snappy"
 )
 
@@ -38,7 +38,7 @@ const (
 	// NomsVersionHeader is the name of the header that Noms clients and
 	// servers must set in every request/response.
 	NomsVersionHeader = "x-noms-vers"
-	nomsBaseHTML      = "<html><head></head><body><p>Hi. This is a Noms HTTP server.</p><p>To learn more, visit <a href=\"https://github.com/attic-labs/noms\">our GitHub project</a>.</p></body></html>"
+	nomsBaseHTML      = "<html><head></head><body><p>Hi. This is a Noms HTTP server.</p><p>To learn more, visit <a href=\"https://github.com/ndau/noms\">our GitHub project</a>.</p></body></html>"
 	maxGetBatchSize   = 1 << 14 // Limit GetMany() to ~16k chunks, or ~64MB of data
 )
 

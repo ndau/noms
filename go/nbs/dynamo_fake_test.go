@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"testing"
 
-	"github.com/attic-labs/noms/go/constants"
+	"github.com/ndau/noms/go/constants"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/stretchr/testify/assert"

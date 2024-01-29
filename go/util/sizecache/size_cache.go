@@ -12,7 +12,7 @@ import (
 	"container/list"
 	"sync"
 
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/go/d"
 )
 
 type sizeCacheEntry struct {

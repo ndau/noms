@@ -5,8 +5,8 @@
 package datas
 
 import (
-	"github.com/attic-labs/noms/go/merge"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/merge"
+	"github.com/ndau/noms/go/types"
 )
 
 // CommitOptions is used to pass options into Commit.

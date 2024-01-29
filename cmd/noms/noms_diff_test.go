@@ -9,9 +9,9 @@ import (
 
 	"strings"
 
-	"github.com/attic-labs/noms/go/spec"
-	"github.com/attic-labs/noms/go/types"
-	"github.com/attic-labs/noms/go/util/clienttest"
+	"github.com/ndau/noms/go/spec"
+	"github.com/ndau/noms/go/types"
+	"github.com/ndau/noms/go/util/clienttest"
 	"github.com/stretchr/testify/suite"
 )
 

@@ -10,18 +10,18 @@ import (
 	"syscall"
 
 	"github.com/attic-labs/kingpin"
-	"github.com/attic-labs/noms/cmd/util"
-	"github.com/attic-labs/noms/go/config"
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/datas"
-	"github.com/attic-labs/noms/go/util/profile"
+	"github.com/ndau/noms/cmd/util"
+	"github.com/ndau/noms/go/config"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/datas"
+	"github.com/ndau/noms/go/util/profile"
 )
 
 func nomsServe(noms *kingpin.Application) (*kingpin.CmdClause, util.KingpinHandler) {
 	cmd := noms.Command("serve", "Serves a Noms database over HTTP.")
 	address := cmd.Flag("address", "address to listen on").Default("0.0.0.0").String()
 	port := cmd.Flag("port", "port to listen on").Default("8080").Int()
-	db := cmd.Arg("db", "database to work with - see Spelling Databases at https://github.com/attic-labs/noms/blob/master/doc/spelling.md").Required().String()
+	db := cmd.Arg("db", "database to work with - see Spelling Databases at https://github.com/ndau/noms/blob/master/doc/spelling.md").Required().String()
 
 	return cmd, func(_ string) int {
 		cfg := config.NewResolver()

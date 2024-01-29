@@ -7,8 +7,8 @@ package nbs
 import (
 	"sync"
 
-	"github.com/attic-labs/noms/go/chunks"
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/go/chunks"
+	"github.com/ndau/noms/go/d"
 )
 
 const concurrentCompactions = 5

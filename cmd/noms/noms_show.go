@@ -11,12 +11,12 @@ import (
 	"os"
 
 	"github.com/attic-labs/kingpin"
-	"github.com/attic-labs/noms/cmd/util"
-	"github.com/attic-labs/noms/go/config"
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/types"
-	"github.com/attic-labs/noms/go/util/datetime"
-	"github.com/attic-labs/noms/go/util/outputpager"
+	"github.com/ndau/noms/cmd/util"
+	"github.com/ndau/noms/go/config"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/types"
+	"github.com/ndau/noms/go/util/datetime"
+	"github.com/ndau/noms/go/util/outputpager"
 )
 
 func nomsShow(noms *kingpin.Application) (*kingpin.CmdClause, util.KingpinHandler) {
@@ -24,7 +24,7 @@ func nomsShow(noms *kingpin.Application) (*kingpin.CmdClause, util.KingpinHandle
 	showRaw := cmd.Flag("raw", "dump the value in binary format").Bool()
 	showStats := cmd.Flag("stats", "report statics related to the value").Bool()
 	tzName := cmd.Flag("tz", "display formatted date comments in specified timezone, must be: local or utc").Default("local").String()
-	path := cmd.Arg("path", "value to display - see Spelling Values at https://github.com/attic-labs/noms/blob/master/doc/spelling.md").Required().String()
+	path := cmd.Arg("path", "value to display - see Spelling Values at https://github.com/ndau/noms/blob/master/doc/spelling.md").Required().String()
 
 	return cmd, func(_ string) int {
 		cfg := config.NewResolver()

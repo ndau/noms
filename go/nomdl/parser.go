@@ -12,8 +12,8 @@ import (
 	"strings"
 	"text/scanner"
 
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/types"
 )
 
 // Parser provides ways to parse Noms types.

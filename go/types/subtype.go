@@ -5,7 +5,7 @@
 package types
 
 import (
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/go/d"
 )
 
 func assertSubtype(t *Type, v Value) {
@@ -21,7 +21,7 @@ func IsSubtype(requiredType, concreteType *Type) bool {
 }
 
 // IsSubtypeDisallowExtraFields is a slightly weird variant of IsSubtype. It returns true IFF IsSubtype(requiredType, concreteType) AND Structs in concreteType CANNOT have field names absent in requiredType
-// ISSUE: https://github.com/attic-labs/noms/issues/3446
+// ISSUE: https://github.com/ndau/noms/issues/3446
 func IsSubtypeDisallowExtraStructFields(requiredType, concreteType *Type) bool {
 	isSub, hasExtra := isSubtypeDetails(requiredType, concreteType, false, nil)
 	if hasExtra {

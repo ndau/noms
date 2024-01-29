@@ -7,7 +7,7 @@ package nbs
 import (
 	"testing"
 
-	"github.com/attic-labs/noms/go/util/sizecache"
+	"github.com/ndau/noms/go/util/sizecache"
 	"github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/stretchr/testify/assert"
 )

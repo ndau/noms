@@ -241,7 +241,7 @@ func shuffle(a []testGraphOp) {
 	}
 }
 
-// See https://github.com/attic-labs/noms/issues/3840
+// See https://github.com/ndau/noms/issues/3840
 func TestGraphBuilderNestedMapSet(t *testing.T) {
 	assert := assert.New(t)
 

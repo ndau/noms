@@ -11,9 +11,9 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/attic-labs/noms/go/chunks"
-	"github.com/attic-labs/noms/go/constants"
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/go/chunks"
+	"github.com/ndau/noms/go/constants"
+	"github.com/ndau/noms/go/d"
 	"github.com/julienschmidt/httprouter"
 )
 

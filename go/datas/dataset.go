@@ -7,8 +7,8 @@ package datas
 import (
 	"regexp"
 
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/types"
 )
 
 // DatasetRe is a regexp that matches a legal Dataset name anywhere within the

@@ -8,16 +8,16 @@ import (
 	"fmt"
 
 	"github.com/attic-labs/kingpin"
-	"github.com/attic-labs/noms/cmd/util"
-	"github.com/attic-labs/noms/go/config"
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/cmd/util"
+	"github.com/ndau/noms/go/config"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/types"
 )
 
 func nomsDs(noms *kingpin.Application) (*kingpin.CmdClause, util.KingpinHandler) {
 	cmd := noms.Command("ds", "Dataset management.")
 	del := cmd.Flag("delete", "delete a dataset").Short('d').Bool()
-	name := cmd.Arg("name", "name of the database to list or dataset to delete - see Spelling Objects at https://github.com/attic-labs/noms/blob/master/doc/spelling.md").String()
+	name := cmd.Arg("name", "name of the database to list or dataset to delete - see Spelling Objects at https://github.com/ndau/noms/blob/master/doc/spelling.md").String()
 
 	return cmd, func(input string) int {
 		cfg := config.NewResolver()

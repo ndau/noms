@@ -12,8 +12,8 @@ import (
 	"strings"
 
 	"github.com/attic-labs/graphql"
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/types"
 )
 
 // TypeConverter provides functions to convert between Noms types and GraphQL
@@ -180,7 +180,7 @@ func (tc *TypeConverter) nomsTypeToGraphQLType(nomsType *types.Type, boxedIfScal
 		gqlType = tc.unionToGQLUnion(nomsType)
 
 	case types.BlobKind, types.ValueKind, types.TypeKind:
-		// TODO: https://github.com/attic-labs/noms/issues/3155
+		// TODO: https://github.com/ndau/noms/issues/3155
 		gqlType = graphql.String
 
 	case types.CycleKind:
@@ -242,7 +242,7 @@ func (tc *TypeConverter) nomsTypeToGraphQLInputType(nomsType *types.Type) (graph
 		return nil, errors.New("GraphQL input type cannot contain unions")
 
 	case types.BlobKind, types.ValueKind, types.TypeKind:
-		// TODO: https://github.com/attic-labs/noms/issues/3155
+		// TODO: https://github.com/ndau/noms/issues/3155
 		gqlType = graphql.String
 
 	case types.CycleKind:
@@ -761,7 +761,7 @@ func getTypeName(nomsType *types.Type, suffix string) string {
 
 	case types.TypeKind:
 		// GraphQL Name cannot start with a number.
-		// TODO: https://github.com/attic-labs/noms/issues/3155
+		// TODO: https://github.com/ndau/noms/issues/3155
 		return fmt.Sprintf("Type%s_%s", suffix, nomsType.Hash().String()[:6])
 
 	case types.UnionKind:
@@ -964,7 +964,7 @@ func MaybeGetScalar(v types.Value) interface{} {
 	case types.String:
 		return string(v.(types.String))
 	case *types.Type, types.Blob:
-		// TODO: https://github.com/attic-labs/noms/issues/3155
+		// TODO: https://github.com/ndau/noms/issues/3155
 		return v.Hash()
 	}
 
