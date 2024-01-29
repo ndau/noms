@@ -26,11 +26,11 @@ const (
 	StorageVersion = "4"
 
 	defaultMemTableSize uint64 = (1 << 20) * 128 // 128MB
-	defaultMaxTables           = 192
+	defaultMaxTables           = 2048
 
-	defaultIndexCacheSize    = (1 << 20) * 8 // 8MB
-	defaultManifestCacheSize = 1 << 23       // 8MB
-	preflushChunkCount       = 8
+	defaultIndexCacheSize    = (1 << 20) * 64 // 64MB
+	defaultManifestCacheSize = (1 << 20) * 64 // 64MB
+	preflushChunkCount       = 32
 )
 
 var (
