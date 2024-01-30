@@ -13,11 +13,11 @@ import (
 	"path"
 	"testing"
 
-	"github.com/attic-labs/noms/go/chunks"
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/datas"
-	"github.com/attic-labs/noms/go/nbs"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/chunks"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/datas"
+	"github.com/ndau/noms/go/nbs"
+	"github.com/ndau/noms/go/types"
 	"github.com/stretchr/testify/assert"
 )
 

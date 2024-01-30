@@ -13,7 +13,7 @@ import (
 	"io"
 	"sync"
 
-	"github.com/attic-labs/noms/go/chunks"
+	"github.com/ndau/noms/go/chunks"
 )
 
 /*

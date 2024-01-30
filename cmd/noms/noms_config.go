@@ -9,9 +9,9 @@ import (
 	"os"
 
 	"github.com/attic-labs/kingpin"
-	"github.com/attic-labs/noms/cmd/util"
-	"github.com/attic-labs/noms/go/config"
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/cmd/util"
+	"github.com/ndau/noms/go/config"
+	"github.com/ndau/noms/go/d"
 )
 
 func nomsConfig(noms *kingpin.Application) (*kingpin.CmdClause, util.KingpinHandler) {

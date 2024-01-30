@@ -13,7 +13,7 @@ import (
 	"path/filepath"
 
 	"github.com/BurntSushi/toml"
-	"github.com/attic-labs/noms/go/spec"
+	"github.com/ndau/noms/go/spec"
 )
 
 type Config struct {

@@ -11,7 +11,7 @@ import (
 
 	"sync"
 
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/go/d"
 )
 
 type BlobEditor struct {

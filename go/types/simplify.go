@@ -3,7 +3,7 @@ package types
 import (
 	"sort"
 
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/go/d"
 )
 
 // simplifyType returns a type that is a super type of the input type but is

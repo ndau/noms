@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/go/d"
 )
 
 func newAWSChunkSource(ddb *ddbTableStore, s3 *s3ObjectReader, al awsLimits, name addr, chunkCount uint32, indexCache *indexCache, stats *Stats) chunkSource {

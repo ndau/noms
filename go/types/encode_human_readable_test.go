@@ -10,7 +10,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/attic-labs/noms/go/util/test"
+	"github.com/ndau/noms/go/util/test"
 	"github.com/stretchr/testify/assert"
 )
 

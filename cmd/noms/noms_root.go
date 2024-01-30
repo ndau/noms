@@ -11,17 +11,17 @@ import (
 	"strings"
 
 	"github.com/attic-labs/kingpin"
-	"github.com/attic-labs/noms/cmd/util"
-	"github.com/attic-labs/noms/go/config"
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/datas"
-	"github.com/attic-labs/noms/go/hash"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/cmd/util"
+	"github.com/ndau/noms/go/config"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/datas"
+	"github.com/ndau/noms/go/hash"
+	"github.com/ndau/noms/go/types"
 )
 
 func nomsRoot(noms *kingpin.Application) (*kingpin.CmdClause, util.KingpinHandler) {
 	cmd := noms.Command("root", "Manage the root hash of the entire database.")
-	db := cmd.Arg("db", "database to work with - see Spelling Databases at https://github.com/attic-labs/noms/blob/master/doc/spelling.md").Required().String()
+	db := cmd.Arg("db", "database to work with - see Spelling Databases at https://github.com/ndau/noms/blob/master/doc/spelling.md").Required().String()
 	var updateRoot string
 	cmd.Flag("update", "replaces the database root hash").StringVar(&updateRoot)
 

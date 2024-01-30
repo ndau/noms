@@ -10,8 +10,8 @@ import (
 	"github.com/attic-labs/kingpin"
 	"github.com/dustin/go-humanize"
 
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/nbs/benchmarks/gen"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/nbs/benchmarks/gen"
 )
 
 const (

@@ -13,10 +13,10 @@ import (
 
 	"github.com/attic-labs/kingpin"
 
-	"github.com/attic-labs/noms/cmd/noms/splore"
-	"github.com/attic-labs/noms/cmd/util"
-	"github.com/attic-labs/noms/go/util/profile"
-	"github.com/attic-labs/noms/go/util/verbose"
+	"github.com/ndau/noms/cmd/noms/splore"
+	"github.com/ndau/noms/cmd/util"
+	"github.com/ndau/noms/go/util/profile"
+	"github.com/ndau/noms/go/util/verbose"
 )
 
 var kingpinCommands = []util.KingpinCommand{

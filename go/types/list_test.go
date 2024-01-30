@@ -8,7 +8,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/attic-labs/noms/go/chunks"
+	"github.com/ndau/noms/go/chunks"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
 )

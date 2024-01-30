@@ -4,7 +4,7 @@
 
 package types
 
-import "github.com/attic-labs/noms/go/d"
+import "github.com/ndau/noms/go/d"
 
 type blobLeafSequence struct {
 	leafSequence

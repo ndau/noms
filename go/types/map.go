@@ -8,7 +8,7 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/go/d"
 )
 
 type Map struct {

@@ -7,8 +7,8 @@ package merge
 import (
 	"fmt"
 
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/types"
 )
 
 // Policy functors are used to merge two values (a and b) against a common

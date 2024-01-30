@@ -12,7 +12,7 @@ import (
 
 	"github.com/attic-labs/kingpin"
 
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/go/d"
 )
 
 var (

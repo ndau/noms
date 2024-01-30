@@ -6,7 +6,7 @@
 package types
 
 import (
-	"github.com/attic-labs/noms/go/hash"
+	"github.com/ndau/noms/go/hash"
 )
 
 // Type defines and describes Noms types, both built-in and user-defined.

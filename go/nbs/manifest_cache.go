@@ -10,7 +10,7 @@ import (
 
 	"sync"
 
-	"github.com/attic-labs/noms/go/d"
+	"github.com/ndau/noms/go/d"
 )
 
 func newManifestCache(maxSize uint64) *manifestCache {

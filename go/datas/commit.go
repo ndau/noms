@@ -7,10 +7,10 @@ package datas
 import (
 	"sort"
 
-	"github.com/attic-labs/noms/go/d"
-	"github.com/attic-labs/noms/go/hash"
-	"github.com/attic-labs/noms/go/nomdl"
-	"github.com/attic-labs/noms/go/types"
+	"github.com/ndau/noms/go/d"
+	"github.com/ndau/noms/go/hash"
+	"github.com/ndau/noms/go/nomdl"
+	"github.com/ndau/noms/go/types"
 )
 
 const (
