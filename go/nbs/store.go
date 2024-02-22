@@ -10,11 +10,11 @@ import (
 	"sync"
 	"time"
 
+	humanize "github.com/dustin/go-humanize"
 	"github.com/ndau/noms/go/chunks"
 	"github.com/ndau/noms/go/constants"
 	"github.com/ndau/noms/go/d"
 	"github.com/ndau/noms/go/hash"
-	humanize "github.com/dustin/go-humanize"
 )
 
 // The root of a Noms Chunk Store is stored in a 'manifest', along with the
@@ -25,8 +25,8 @@ const (
 	// StorageVersion is the version of the on-disk Noms Chunks Store data format.
 	StorageVersion = "4"
 
-	defaultMemTableSize uint64 = (1 << 20) * 128 // 128MB
-	defaultMaxTables           = 2048
+	defaultMemTableSize uint64 = (1 << 20) * 256 // 256MB
+	defaultMaxTables           = 8192
 
 	defaultIndexCacheSize    = (1 << 20) * 64 // 64MB
 	defaultManifestCacheSize = (1 << 20) * 64 // 64MB
